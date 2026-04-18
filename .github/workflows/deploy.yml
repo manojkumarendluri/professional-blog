@@ -17,6 +17,11 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    # Critical fix here:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,7 +36,6 @@ jobs:
         run: npm install
 
       - name: Build
-        # This forces the correct pathing for GitHub Pages
         run: npx vite build --base=/professional-blog/
 
       - name: Setup Pages
