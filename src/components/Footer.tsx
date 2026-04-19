@@ -1,18 +1,18 @@
-import { Github, Linkedin, Twitter, Heart } from 'lucide-react';
+import { Github, Linkedin, Instagram, Heart } from 'lucide-react'
 
 export default function Footer() {
   return (
     <footer className="bg-slate-900 text-white py-10">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
-          <p className="text-amber-400 font-bold text-lg">E. Manojkumar</p>
-          <p className="text-slate-400 text-sm mt-1">Senior QA Automation Engineer · Chennai, India</p>
+          <p className="text-amber-400 font-bold text-lg">Manojkumar Endluri</p>
+          <p className="text-slate-400 text-sm mt-1">Senior Quality Engineer · Chennai, India</p>
         </div>
         <div className="flex items-center gap-5">
           {[
-            { icon: Github, href: 'https://github.com/ursmanoj56' },
-            { icon: Linkedin, href: 'https://linkedin.com/in/yourprofile' },
-            { icon: Twitter, href: 'https://twitter.com/yourprofile' },
+            { icon: Github, href: 'https://github.com/manojkumarendluri' },
+            { icon: Linkedin, href: 'https://www.linkedin.com/in/ursmanoj56/' },
+            { icon: Instagram, href: 'https://www.instagram.com/manojs_stories/' },
           ].map(({ icon: Icon, href }) => (
             <a
               key={href}
@@ -26,9 +26,9 @@ export default function Footer() {
           ))}
         </div>
         <p className="text-slate-500 text-sm flex items-center gap-1">
-          Built with <Heart size={13} className="text-red-400 fill-red-400" /> in Chennai &copy; 2026
+          Built with <Heart size={13} className="text-red-400 fill-red-400" /> in Chennai © 2025
         </p>
       </div>
     </footer>
-  );
+  )
 }

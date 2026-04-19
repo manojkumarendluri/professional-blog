@@ -1,20 +1,20 @@
-import { CheckCircle, Layers, Globe, Smartphone, Database, GitBranch } from 'lucide-react';
+import { CheckCircle, Layers, Globe, Smartphone, Database, GitBranch } from 'lucide-react'
 
 const frameworks = [
   { icon: Globe, label: 'Web Automation', desc: 'Selenium & Playwright-based frameworks for cross-browser E2E testing.' },
   { icon: Smartphone, label: 'Mobile Testing', desc: 'Appium suites for Android & iOS native and hybrid app validation.' },
-  { icon: Database, label: 'API Testing', desc: 'REST & GraphQL API validation with Python Requests and schema assertions.' },
+  { icon: Database, label: 'API Testing', desc: 'REST & GraphQL API validation with Postman and SQL assertions.' },
   { icon: GitBranch, label: 'CI/CD Integration', desc: 'Jenkins & GitHub Actions pipelines with automated test gates.' },
-  { icon: Layers, label: 'Data-Driven Testing', desc: 'Pandas-powered parameterized test execution from Excel/CSV datasets.' },
-  { icon: CheckCircle, label: 'AI Static Analysis', desc: 'Template-based AI-assisted static review for production test coverage.' },
-];
+  { icon: Layers, label: 'Data-Driven Testing', desc: 'Apache POI and Pandas-powered parameterized test execution.' },
+  { icon: CheckCircle, label: 'AI-Driven Analysis', desc: 'ChatGPT-powered static analysis and template validation.' },
+]
 
 const metrics = [
-  { label: 'Test Cases Automated', value: '2,000+' },
-  { label: 'Reduction in Manual Effort', value: '60%' },
-  { label: 'Frameworks Built', value: '8+' },
-  { label: 'Defects Prevented', value: '500+' },
-];
+  { label: '2000+ Test Cases', value: 'Automated' },
+  { label: '60% Efficiency Gain', value: 'Automation ROI' },
+  { label: '95%+ Coverage', value: 'Test Automation' },
+  { label: '500+ Defects', value: 'Prevented Early' },
+]
 
 export default function Automation() {
   return (
@@ -23,18 +23,18 @@ export default function Automation() {
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div>
             <p className="text-amber-500 text-sm font-semibold tracking-widest uppercase mb-2">Core Expertise</p>
-            <h2 className="text-4xl font-bold text-slate-900 mb-5">Automation Experience</h2>
+            <h2 className="text-4xl font-bold text-slate-900 mb-5">E2E Automation Frameworks</h2>
             <p className="text-slate-600 leading-relaxed mb-6">
-              With over 5 years in QA automation, I specialize in building scalable test infrastructure from the ground up — owning the full lifecycle from framework design and CI integration to production quality gates.
+              With over 5 years in QA automation, I specialize in building scalable test infrastructure across web, mobile, and API platforms. Expert in Java-Selenium and Python-Selenium frameworks, bridging the gap between manual precision and automation efficiency.
             </p>
             <p className="text-slate-600 leading-relaxed mb-8">
-              As a solo QA engineer, I have driven test strategy, maintained automation health, and ensured product stability across web, mobile, and API layers using Python, Java, and modern automation stacks.
+              Experienced with Appium for mobile automation, Postman for API testing, and SQL for database verification. Strong foundation in Page Object Model (POM), data-driven testing, and CI/CD integration.
             </p>
             <div className="grid grid-cols-2 gap-4">
               {metrics.map(m => (
                 <div key={m.label} className="bg-slate-50 rounded-xl p-5 border border-slate-100">
-                  <p className="text-3xl font-bold text-amber-500 mb-1">{m.value}</p>
-                  <p className="text-slate-500 text-sm">{m.label}</p>
+                  <p className="text-amber-500 font-bold mb-1">{m.label}</p>
+                  <p className="text-slate-500 text-sm">{m.value}</p>
                 </div>
               ))}
             </div>
@@ -43,7 +43,7 @@ export default function Automation() {
           <div>
             <div className="grid gap-4">
               {frameworks.map(fw => {
-                const Icon = fw.icon;
+                const Icon = fw.icon
                 return (
                   <div
                     key={fw.label}
@@ -57,20 +57,20 @@ export default function Automation() {
                       <p className="text-slate-500 text-sm">{fw.desc}</p>
                     </div>
                   </div>
-                );
+                )
               })}
             </div>
           </div>
         </div>
 
         <div className="mt-16 bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-8 text-white">
-          <h3 className="font-bold text-lg mb-6 text-amber-400">Current Stack Proficiency</h3>
+          <h3 className="font-bold text-lg mb-6 text-amber-400">Technical Proficiency</h3>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { skill: 'Selenium / Playwright', level: 95 },
-              { skill: 'Python', level: 92 },
-              { skill: 'Appium', level: 80 },
-              { skill: 'Java / TestNG', level: 78 },
+              { skill: 'Selenium / Appium', level: 95 },
+              { skill: 'Java / TestNG', level: 92 },
+              { skill: 'Python Automation', level: 85 },
+              { skill: 'API Testing', level: 88 },
             ].map(s => (
               <div key={s.skill}>
                 <div className="flex justify-between text-sm mb-2">
@@ -89,5 +89,5 @@ export default function Automation() {
         </div>
       </div>
     </section>
-  );
+  )
 }

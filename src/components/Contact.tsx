@@ -1,28 +1,28 @@
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send } from 'lucide-react';
-import { useState } from 'react';
+import { Mail, Phone, MapPin, Github, Linkedin, Instagram, Send } from 'lucide-react'
+import { useState } from 'react'
 
 const contactDetails = [
-  { icon: Mail, label: 'Email', value: 'emanoj.kumar56@gmail.com', href: 'mailto:emanoj.kumar56@gmail.com' },
-  { icon: Phone, label: 'Phone', value: '+91 [Your Number]', href: 'tel:+91' },
+  { icon: Mail, label: 'Email', value: 'manoj.endluri01@gmail.com', href: 'mailto:manoj.endluri01@gmail.com' },
+  { icon: Phone, label: 'Phone', value: '+91 9740808574', href: 'tel:+919740808574' },
   { icon: MapPin, label: 'Location', value: 'Chennai, Tamil Nadu, India', href: '#' },
-];
+]
 
 const socials = [
-  { icon: Github, label: 'GitHub', handle: '@ursmanoj56', href: 'https://github.com/ursmanoj56', color: 'hover:text-slate-900' },
-  { icon: Linkedin, label: 'LinkedIn', handle: 'Endluri Manojkumar', href: 'https://linkedin.com/in/yourprofile', color: 'hover:text-blue-600' },
-  { icon: Twitter, label: 'Twitter', handle: '@yourhandle', href: 'https://twitter.com/yourprofile', color: 'hover:text-sky-500' },
-];
+  { icon: Github, label: 'GitHub', handle: '@manojkumarendluri', href: 'https://github.com/manojkumarendluri', color: 'hover:text-slate-900' },
+  { icon: Linkedin, label: 'LinkedIn', handle: 'Manojkumar Endluri', href: 'https://www.linkedin.com/in/ursmanoj56/', color: 'hover:text-blue-600' },
+  { icon: Instagram, label: 'Instagram', handle: '@manojs_stories', href: 'https://www.instagram.com/manojs_stories/', color: 'hover:text-pink-500' },
+]
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [sent, setSent] = useState(false);
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [sent, setSent] = useState(false)
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSent(true);
-    setForm({ name: '', email: '', message: '' });
-    setTimeout(() => setSent(false), 4000);
-  };
+    e.preventDefault()
+    setSent(true)
+    setForm({ name: '', email: '', message: '' })
+    setTimeout(() => setSent(false), 4000)
+  }
 
   return (
     <section id="contact" className="py-24 bg-white">
@@ -31,7 +31,7 @@ export default function Contact() {
           <p className="text-amber-500 text-sm font-semibold tracking-widest uppercase mb-2">Get in Touch</p>
           <h2 className="text-4xl font-bold text-slate-900 mb-4">Contact</h2>
           <p className="text-slate-500 max-w-md mx-auto">
-            Open to collaborations, freelance projects, and interesting conversations about QA, AI, and everything in between.
+            Open to collaborations, freelance projects, and interesting conversations about QA automation and AI modernization.
           </p>
         </div>
 
@@ -39,7 +39,7 @@ export default function Contact() {
           <div>
             <div className="space-y-5 mb-10">
               {contactDetails.map(item => {
-                const Icon = item.icon;
+                const Icon = item.icon
                 return (
                   <a
                     key={item.label}
@@ -54,7 +54,7 @@ export default function Contact() {
                       <p className="text-slate-800 font-medium group-hover:text-amber-600 transition-colors">{item.value}</p>
                     </div>
                   </a>
-                );
+                )
               })}
             </div>
 
@@ -62,7 +62,7 @@ export default function Contact() {
               <p className="text-sm text-slate-500 uppercase tracking-widest font-semibold mb-4">Social Profiles</p>
               <div className="space-y-3">
                 {socials.map(s => {
-                  const Icon = s.icon;
+                  const Icon = s.icon
                   return (
                     <a
                       key={s.label}
@@ -79,7 +79,7 @@ export default function Contact() {
                         <p className="text-xs text-slate-400">{s.handle}</p>
                       </div>
                     </a>
-                  );
+                  )
                 })}
               </div>
             </div>
@@ -125,7 +125,7 @@ export default function Contact() {
                     rows={5}
                     value={form.message}
                     onChange={e => setForm({ ...form, message: e.target.value })}
-                    placeholder="Tell me about your project or idea..."
+                    placeholder="Tell me about your project or opportunity..."
                     className="w-full border border-slate-200 rounded-lg px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition resize-none"
                   />
                 </div>
@@ -141,5 +141,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  );
+  )
 }

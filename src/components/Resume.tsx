@@ -1,38 +1,59 @@
-import { Briefcase, GraduationCap, Award, Download } from 'lucide-react';
+import { Briefcase, GraduationCap, Award, Download } from 'lucide-react'
 
 const experience = [
   {
-    role: 'Senior QA Automation Engineer',
-    company: 'Current Employer',
-    period: '2022 – Present',
+    role: 'Senior Quality Engineer',
+    company: 'Moving Walls',
+    period: 'Feb 2025 – Present',
     location: 'Chennai, India',
     points: [
-      'Led solo QA automation operations including production reviews and AI static template analysis.',
-      'Designed and maintained end-to-end test frameworks using Selenium & Playwright.',
-      'Integrated AI-assisted test generation pipelines, reducing manual effort by 60%.',
-      'Managed Salesforce CRM testing with Appium for mobile validation layers.',
+      'Leading E2E quality assurance for global e-commerce marketplaces and media owner platforms.',
+      'Architected AI Autocoder software to automate complex scripting tasks and improve team productivity.',
+      'Conducting production document reviews and AI-driven static template analysis for deployment verification.',
+      'Directing Agile Sprint management with task allocation and bug tracking for multi-platform projects.',
     ],
   },
   {
-    role: 'QA Automation Engineer',
-    company: 'Previous Employer',
-    period: '2019 – 2022',
+    role: 'Software Test Engineer',
+    company: 'Vanigam Software Services',
+    period: 'Apr 2024 – Jan 2025',
     location: 'Chennai, India',
     points: [
-      'Built Python-based automation suites covering web, API, and desktop apps.',
-      'Developed data-driven test frameworks using Pandas for parameterized test execution.',
-      'Collaborated with dev teams to embed QA gates into CI/CD pipelines.',
-      'Mentored junior QA engineers in scripting and framework best practices.',
+      'Managed comprehensive QA lifecycles for robust software products ensuring high-standard delivery.',
+      'Executed advanced API testing with Postman and performed backend validation using SQL.',
+      'Optimized test suite performance and maintained 95%+ automation coverage.',
     ],
   },
-];
+  {
+    role: 'Test Engineer',
+    company: 'Advik Solutions Pvt. Ltd.',
+    period: 'Dec 2022 – Apr 2024',
+    location: 'Bengaluru, India',
+    points: [
+      'Developed and maintained mobile automation frameworks using Appium and Java for Android/iOS platforms.',
+      'Implemented Page Object Model (POM) element libraries to increase script reusability by 40%.',
+      'Managed regression, smoke, and functional test cycles for major web applications.',
+    ],
+  },
+  {
+    role: 'Test Engineer',
+    company: 'IOTinterCON',
+    period: 'Nov 2019 – Feb 2021',
+    location: 'Bengaluru, India',
+    points: [
+      'Engineered automation scripts using Selenium WebDriver and TestNG for Amazon.com.',
+      'Performed data-driven testing and cross-browser result analysis using Apache POI.',
+      'Developed comprehensive test documentation and test case management strategies.',
+    ],
+  },
+]
 
 const skills = [
-  { category: 'Test Automation', items: ['Selenium', 'Playwright', 'Appium', 'TestNG', 'PyTest'] },
-  { category: 'Languages', items: ['Python', 'Java', 'JavaScript', 'TypeScript'] },
-  { category: 'AI & Data', items: ['Pandas', 'Scikit-learn', 'OpenAI API', 'Prompt Engineering'] },
-  { category: 'Tools & Platforms', items: ['Salesforce', 'JIRA', 'Git', 'Jenkins', 'Docker'] },
-];
+  { category: 'Automation Tools', items: ['Selenium WebDriver', 'Appium', 'Playwright', 'TestNG', 'Maven'] },
+  { category: 'Languages', items: ['Java', 'Python', 'JavaScript', 'PL/SQL', 'C'] },
+  { category: 'AI & Modernization', items: ['AI Autocoder', 'AI Static Template Analysis', 'ChatGPT-driven Testing'] },
+  { category: 'Tools & DevOps', items: ['Jira', 'Postman', 'Jenkins', 'Git/GitHub', 'Docker'] },
+]
 
 export default function Resume() {
   return (
@@ -44,7 +65,8 @@ export default function Resume() {
             <h2 className="text-4xl font-bold text-slate-900">Resume</h2>
           </div>
           <a
-            href="#"
+            href="/Manojkumar_Endluri_-_SDET_Resume.pdf"
+            download
             className="hidden sm:flex items-center gap-2 bg-slate-900 text-white px-5 py-3 rounded-lg hover:bg-slate-700 transition-colors text-sm font-medium"
           >
             <Download size={15} /> Download CV
@@ -95,11 +117,10 @@ export default function Resume() {
                 <div className="flex flex-wrap justify-between gap-2">
                   <div>
                     <h4 className="font-semibold text-slate-900">B.Tech — Electronics & Communication Engineering</h4>
-                    <p className="text-amber-600 text-sm font-medium">Anna University, Chennai</p>
+                    <p className="text-amber-600 text-sm font-medium">VEMU Institute of Technology / JNTU Anantapur</p>
                   </div>
-                  <p className="text-slate-500 text-sm">2015 – 2019</p>
+                  <p className="text-slate-500 text-sm">2013 – 2017</p>
                 </div>
-                <p className="text-slate-600 text-sm mt-2">Graduated with a strong foundation in signal processing, embedded systems, and programming — bridging hardware intuition with software precision.</p>
               </div>
             </div>
           </div>
@@ -130,14 +151,14 @@ export default function Resume() {
               <h4 className="font-semibold mb-4 text-amber-400">Certifications</h4>
               <ul className="space-y-2 text-sm text-slate-300">
                 <li>› ISTQB Certified Tester — Foundation Level</li>
-                <li>› Selenium WebDriver with Python</li>
-                <li>› Salesforce Administrator (in progress)</li>
+                <li>› Selenium WebDriver with Java</li>
+                <li>› API Testing with Postman</li>
               </ul>
             </div>
 
             <div className="bg-amber-50 border border-amber-100 rounded-xl p-6">
               <h4 className="font-semibold text-slate-800 mb-4">Languages</h4>
-              {[{ lang: 'English', level: 'Professional' }, { lang: 'Telugu', level: 'Native' }, { lang: 'Tamil', level: 'Conversational' }].map(l => (
+              {[{ lang: 'English', level: 'Professional' }, { lang: 'Telugu', level: 'Native' }, { lang: 'Hindi', level: 'Conversational' }].map(l => (
                 <div key={l.lang} className="flex justify-between text-sm mb-2">
                   <span className="text-slate-700">{l.lang}</span>
                   <span className="text-amber-600 font-medium">{l.level}</span>
@@ -148,5 +169,5 @@ export default function Resume() {
         </div>
       </div>
     </section>
-  );
+  )
 }
