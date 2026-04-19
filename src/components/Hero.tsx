@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ChevronDown, Instagram } from 'lucide-react'
+import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react'
 
 export default function Hero() {
   return (

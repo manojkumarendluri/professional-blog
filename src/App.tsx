@@ -1,21 +1,16 @@
-import Nav from './components/Nav'
-import Hero from './components/Hero'
-import Resume from './components/Resume'
-import AITools from './components/AITools'
-import Automation from './components/Automation'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import { Routes, Route } from 'react-router-dom'
+import Home from './components/Home'
+import Photography from './components/Photography'
+import Travelling from './components/Travelling'
+import ShortStoryWriting from './components/ShortStoryWriting'
 
 export default function App() {
   return (
-    <div className="font-sans antialiased">
-      <Nav />
-      <Hero />
-      <Resume />
-      <AITools />
-      <Automation />
-      <Contact />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/photography" element={<Photography />} />
+      <Route path="/travelling" element={<Travelling />} />
+      <Route path="/short-story-writing" element={<ShortStoryWriting />} />
+    </Routes>
   )
 }

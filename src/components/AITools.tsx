@@ -1,4 +1,4 @@
-import { Cpu, Mail, FileText, ExternalLink, Github } from 'lucide-react'
+import { Cpu, Mail, FileText, Github } from 'lucide-react'
 
 const tools = [
   {
